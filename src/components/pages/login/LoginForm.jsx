@@ -26,6 +26,7 @@ export default function LoginForm() {
               placeholder="Entrez votre prénom"
               required/>
       <button><Link to="/order">Aller à la page de commande</Link></button>
+      <Link to="/order">Order</Link>
     </form>
   )
 }
