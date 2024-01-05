@@ -8,8 +8,8 @@ import { Route, Routes } from "react-router-dom";
   return (
     <Routes>
       <Route path="/" element={<LoginPage/>}/>
-      <Route path="/order" element={<OrderPage />} />
-      <Route path="*" element={<ErrorPage />} />
+      <Route path="/order/:username" element={<OrderPage/>} />
+      <Route path="*" element={<ErrorPage/>} />
     </Routes>
   )
  }
