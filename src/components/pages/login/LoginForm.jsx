@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import { Link } from "react-router-dom";
+
 
 export default function LoginForm() {
   //state
@@ -23,7 +25,7 @@ export default function LoginForm() {
               type="text"
               placeholder="Entrez votre prénom"
               required/>
-      <button>Mon espace</button>
+      <button><Link to="/order">Aller à la page de commande</Link></button>
     </form>
   )
 }
