@@ -1,10 +1,10 @@
-
+import { Link } from "react-router-dom";
 
 export default function ErrorPage() {
   return (
-    <div id="error-page">
+    <div>
       <h1>Error Page</h1>
-      <button>Retour à la page d'acceuil</button>
+      <Link to="/"><button>Retour à la page d'acceuil</button></Link>
     </div>
   );
 }
