@@ -1,12 +1,12 @@
 import React, {useState} from 'react'
 import { useNavigate } from "react-router-dom";
-
+import styled from "styled-components"
+import { theme } from '../../../theme';
 
 export default function LoginForm() {
   //state
   const [inputValue, setInputValue] = useState("")
   const navigate = useNavigate()
-
 
   //comportements
   const handleSubmit = (event) => {
@@ -19,7 +19,7 @@ export default function LoginForm() {
   }
   //affichage
   return (
-    <form action="submit" onSubmit={handleSubmit}>
+    <LoginFormStyle action="submit" onSubmit={handleSubmit}>
     <h1>Bienvenue chez nous </h1>
     <h2>Connectez-vous !</h2>
       <input value={inputValue}
@@ -28,9 +28,17 @@ export default function LoginForm() {
               placeholder="Entrez votre prénom"
               required/>
       <button>Aller à la page de commande</button>
-    </form>
+    </LoginFormStyle>
   )
 }
+
+// Librairie Style components
+const LoginFormStyle = styled.form`
+  color : ${theme.colors.primary_burger} ;
+  h1 {
+    font-size : ${theme.fonts.P5};
+  }
+`
 
 
 // Ajout style composant, 4 manieres :
