@@ -31,3 +31,14 @@ export default function LoginForm() {
     </form>
   )
 }
+
+
+// Ajout style composant, 4 manieres :
+// - inline style ex: <h1 style={{color: "red", backgroundColor: "blue"}}> Bienvenue </h1>
+
+// - object style : const titreH1style = {color: "red", backgroundColor: "blue"}
+//                  <h1 style = {titreH1style} >Bienvenue </h1>
+// - module css (avec className): Créer un fichier(a coté du composant conserner) et definir des regle css a l'interieur.
+//                                Faire un import dans le composant
+
+// - global style (index.css)
