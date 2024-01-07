@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components"
 import { theme } from '../../../theme';
 import { IoIosArrowForward } from "react-icons/io";
-import { BsPersonCircle } from "react-icons/bs";
+import Input from "./Input"
 
 export default function LoginForm() {
   //state
@@ -24,14 +24,8 @@ export default function LoginForm() {
     <LoginFormStyle action="submit" onSubmit={handleSubmit}>
     <h2>Bienvenue chez nous !</h2>
     <h3>Connectez-vous</h3>
-    <div className='input-container'>
-      <BsPersonCircle />
-      <input value={inputValue}
-              onChange={handleChange}
-              type="text"
-              placeholder= "Entrez votre prénom"
-              required/>
-    </ div>
+    <Input />
+
             <br/>
    <button className='button-container'>
      <span>Accéder à mon espace </span>
@@ -81,7 +75,7 @@ const LoginFormStyle = styled.form`
     color: ${theme.colors.greyDark};
     }
   }
-  
+
   .button-container {
     display: flex;
     align-items: center;
