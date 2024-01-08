@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components"
 import { theme } from '../../../theme';
 import { IoIosArrowForward } from "react-icons/io";
+import { BsPersonCircle } from "react-icons/bs";
 import Input from "./Input"
 
 export default function LoginForm() {
@@ -22,15 +23,23 @@ export default function LoginForm() {
   //affichage
   return (
     <LoginFormStyle action="submit" onSubmit={handleSubmit}>
-    <h2>Bienvenue chez nous !</h2>
-    <h3>Connectez-vous</h3>
-    <Input />
 
-            <br/>
-   <button className='button-container'>
-     <span>Accéder à mon espace </span>
-     <IoIosArrowForward />
-   </button >
+      <h2>Bienvenue chez nous !</h2>
+      <h3>Connectez-vous</h3>
+
+      <Input
+        value={inputValue}
+        onChange={handleChange}
+        Icon={<BsPersonCircle />}
+        placeholder={"Entrez votre prénom"}
+        required
+      />
+
+      <button className='button-container'>
+        <span>Accéder à mon espace </span>
+        <IoIosArrowForward />
+      </button >
+
     </LoginFormStyle>
   )
 }
@@ -53,28 +62,6 @@ const LoginFormStyle = styled.form`
     font-size : ${theme.fonts.P3};
     margin-top: 0;
   }
-  .input-container {
-    display: flex;
-    align-items: center;
-    border: 1px solid white;
-    background-color: ${theme.colors.background_white};
-    width: 80%;
-    height: 40px;
-    border-radius: ${theme.borderRadius.round};
-
-    svg {
-      color: ${theme.colors.greyMedium};
-      font-size: ${theme.fonts.P0};
-      margin-right: ${theme.spacing.xs};
-      padding-left: ${theme.spacing.xs};
-    }
-
-    input {
-    border: none;
-    background-color: ${theme.colors.background_white};
-    color: ${theme.colors.greyDark};
-    }
-  }
 
   .button-container {
     display: flex;
@@ -86,6 +73,7 @@ const LoginFormStyle = styled.form`
     border-radius: ${theme.borderRadius.round};
     font-family: "Open Sans";
     font-size: ${theme.fonts.XS};
+    color: ${theme.colors.white};
 
     svg {
       font-size: ${theme.fonts.P0};
