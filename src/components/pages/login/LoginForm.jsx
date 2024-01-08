@@ -1,10 +1,11 @@
-import React, {useState} from 'react'
-import { useNavigate } from "react-router-dom";
+import {useState} from 'react'
+import { useNavigate } from "react-router-dom"
 import styled from "styled-components"
-import { theme } from '../../../theme';
-import { IoIosArrowForward } from "react-icons/io";
-import { BsPersonCircle } from "react-icons/bs";
-import TextInput from "./TextInput"
+import { theme } from '../../../theme'
+import { IoIosArrowForward } from "react-icons/io"
+import { BsPersonCircle } from "react-icons/bs"
+import TextInput from "../../reusable-ui/TextInput"
+import PrimaryButton from '../../reusable-ui/PrimaryButton'
 
 export default function LoginForm() {
   //state
@@ -35,10 +36,7 @@ export default function LoginForm() {
         required
       />
 
-      <button className='button-container'>
-        <span>Accéder à mon espace </span>
-        <IoIosArrowForward />
-      </button >
+      <PrimaryButton label={"Accédez à votre espace"} Icon={<IoIosArrowForward/>}/>
 
     </LoginFormStyle>
   )
@@ -62,29 +60,10 @@ const LoginFormStyle = styled.form`
     font-size : ${theme.fonts.P3};
     margin-top: 0;
   }
-
-  .button-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    height: 40px;
-    background-color: ${theme.colors.primary};
-    border-radius: ${theme.borderRadius.round};
-    font-family: "Open Sans";
-    font-size: ${theme.fonts.XS};
-    color: ${theme.colors.white};
-
-    svg {
-      font-size: ${theme.fonts.P0};
-      margin-right: ${theme.spacing.xs};
-      padding-left: ${theme.spacing.xs};
-    }
-  }
-  .button-container:hover {
-    background-color: ${theme.colors.background_white};
-    color: ${theme.colors.primary};
-    border-color: ${theme.colors.primary};
+  svg {
+    font-size: ${theme.fonts.P0};
+    margin-right: ${theme.spacing.xs};
+    padding-left: ${theme.spacing.xs};
   }
 `
 

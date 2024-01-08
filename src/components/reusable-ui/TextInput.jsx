@@ -1,11 +1,11 @@
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import { theme } from '../../../theme'
+import { theme } from '../../theme'
 
 export default function TextInput({value, onChange, Icon, ...restProps}) {
   return (
     <InputStyled>
-      {Icon}
+      {Icon && Icon}
       <input
         value={value}
         onChange={onChange}
@@ -43,4 +43,5 @@ const InputStyled = styled.div`
   background-color: ${theme.colors.background_white};
   color: ${theme.colors.greyDark};
   }
+
 `
