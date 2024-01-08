@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { theme } from '../../../theme';
 import { IoIosArrowForward } from "react-icons/io";
 import { BsPersonCircle } from "react-icons/bs";
-import Input from "./Input"
+import TextInput from "./TextInput"
 
 export default function LoginForm() {
   //state
@@ -27,7 +27,7 @@ export default function LoginForm() {
       <h2>Bienvenue chez nous !</h2>
       <h3>Connectez-vous</h3>
 
-      <Input
+      <TextInput
         value={inputValue}
         onChange={handleChange}
         Icon={<BsPersonCircle />}

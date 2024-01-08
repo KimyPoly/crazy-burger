@@ -2,7 +2,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import { theme } from '../../../theme'
 
-export default function Input({value, onChange, Icon, ...restProps}) {
+export default function TextInput({value, onChange, Icon, ...restProps}) {
   return (
     <InputStyled>
       {Icon}
@@ -15,7 +15,7 @@ export default function Input({value, onChange, Icon, ...restProps}) {
     </ InputStyled>
   )
 }
-Input.propTypes = {
+TextInput.propTypes = {
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   Icon: PropTypes.element,
