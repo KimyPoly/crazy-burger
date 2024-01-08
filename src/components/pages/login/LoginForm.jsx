@@ -53,7 +53,7 @@ const LoginFormStyle = styled.form`
   h2 {
     font-size : ${theme.fonts.P5};
     border-bottom: 2px solid ${theme.colors.primary};
-    padding-bottom: 20px;
+    padding-bottom: ${theme.spacing.md};
     margin-top: 0;
   }
   h3 {

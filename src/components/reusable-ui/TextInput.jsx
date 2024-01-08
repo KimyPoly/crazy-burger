@@ -30,7 +30,8 @@ const InputStyled = styled.div`
   width: 80%;
   height: 40px;
   border-radius: ${theme.borderRadius.round};
-  margin-bottom: 10px;
+  margin-bottom: ${theme.spacing.sm};
+  
   svg {
     color: ${theme.colors.greyMedium};
     font-size: ${theme.fonts.P0};
