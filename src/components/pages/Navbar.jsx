@@ -7,23 +7,23 @@ export default function Navbar() {
   const {username} = useParams()
 
   return (
-   <NavBarstyled>
+   <NavBarStyled>
      <div className="navLogo">
       <Logo/>
      </div>
      <div className="navRight">
-      <h3>Bonjour {username}</h3>
+      <h3>Hey, {username}</h3>
       <Link to="/">Se déconnecter</Link>
      </div>
-   </NavBarstyled>
+   </NavBarStyled>
   )
 }
 
-const NavBarstyled = styled.div`
-  height: 95px;
-  width: 1400px;
+const NavBarStyled = styled.div`
+  height: 90px;
+  width: 100%;
   background-color: white;
-  position: fixed;
+  /* position: fixed; */
   top: 0;
 
   .navRight {
@@ -33,7 +33,7 @@ const NavBarstyled = styled.div`
 
   .navLogo {
     float: left;
-    width: 240px;
+    width: 200px;
   }
 
 `;

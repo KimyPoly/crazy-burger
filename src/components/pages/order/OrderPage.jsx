@@ -12,7 +12,11 @@ export default function OrderPage() {
   return (
 
     <OrderPageStyled>
-      <Navbar/>
+      <div className='container'>
+        <Navbar/>
+        <div className="main">
+        </div>
+      </div >
     </OrderPageStyled>
 
   )
@@ -20,5 +24,17 @@ export default function OrderPage() {
 
 
 const OrderPageStyled = styled.div`
+  height: 100vh;
+  width: 1440px;
+  background: ${theme.colors.primary};
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  .container {
+    height: 90vh;
+    width: 1400px;
+    background-color: red;
+    border-radius: ${theme.borderRadius.round};
+  }
 `
