@@ -1,12 +1,12 @@
 import styled from "styled-components"
-import { theme } from '/Users/kim/crazy-burger/src/theme';
+import { theme } from '../../theme'
 
 export default function Logo() {
 
   return (
     <CenteredLogo>
       <h1>CRAZY</h1>
-      <LogoImage src="src/assets/images/logo-orange.png" alt="Logo" />
+      <LogoImage src="public/images/logo-orange.png" alt="Logo" />
       <h1>BURGER</h1>
    </CenteredLogo>
   )

@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import { theme } from '/Users/kim/crazy-burger/src/theme'
+import { theme } from '../../theme'
 
 export default function PrimaryButton({label, Icon}) {
   return (
