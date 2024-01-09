@@ -1,15 +1,24 @@
-import { Link, useParams } from "react-router-dom";
+import styled from 'styled-components'
+import Navbar from "/Users/kim/crazy-burger/src/components/pages/Navbar.jsx"
+import { theme } from '/Users/kim/crazy-burger/src/theme'
+
 
 export default function OrderPage() {
   //state
- const {username} = useParams()
+
   // comportement
 
   // affichage
   return (
-    <div>
-      <h1>Bonjour {username}</h1>
-      <Link to="/"><button>Déconnexion</button></Link>
-    </div>
+
+    <OrderPageStyled>
+      <Navbar/>
+    </OrderPageStyled>
+
   )
 }
+
+
+const OrderPageStyled = styled.div`
+
+`
