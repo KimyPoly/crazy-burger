@@ -36,7 +36,7 @@ const OrderPageStyled = styled.div`
     height: 90vh;
     width: 1400px;
     background-color: red;
-    border-radius: ${theme.borderRadius.round};
+    border-radius: ${theme.borderRadius.extraRound};
 
   }
 `
