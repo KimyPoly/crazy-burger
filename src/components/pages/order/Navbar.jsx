@@ -4,7 +4,6 @@ import styled from 'styled-components'
 
 export default function Navbar({username}) {
 
-
   return (
    <NavBarStyled>
      <div className="navLogo">
@@ -19,20 +18,19 @@ export default function Navbar({username}) {
 }
 
 const NavBarStyled = styled.div`
-  height: 90px;
-  width: 100%;
+  height: 10vh;
   background-color: white;
-  /* position: fixed; */
   top: 0;
-
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
   .navRight {
     color: black;
-    float: right;
+
   }
 
   .navLogo {
-    float: left;
-    width: 200px;
+
   }
 
 `;

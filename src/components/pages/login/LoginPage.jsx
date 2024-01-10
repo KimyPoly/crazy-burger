@@ -7,7 +7,7 @@ export default function LoginPage() {
   //affichage
   return (
   <LoginPageStyle>
-    <Logo/>
+    <Logo className={"logo-login"}/>
     <LoginForm/>
   </LoginPageStyle>
 )
@@ -25,4 +25,8 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 font-family: "Amatic SC", cursive;
+
+.logo-login {
+  transform: scale(2.5);
+}
 `

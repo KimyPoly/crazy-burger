@@ -1,12 +1,12 @@
 import styled from "styled-components"
 import { theme } from '../../theme'
 
-export default function Logo() {
+export default function Logo({className}) {
 
   return (
-    <CenteredLogo>
+    <CenteredLogo className={className}>
       <h1>CRAZY</h1>
-      <LogoImage src="public/images/logo-orange.png" alt="Logo" />
+      <LogoImage src="/images/logo-orange.png" alt="Logo" />
       <h1>BURGER</h1>
    </CenteredLogo>
   )
@@ -16,7 +16,6 @@ const CenteredLogo = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: ${theme.spacing.md};
-  transform: scale(2.5);
 
 
   h1 {
@@ -30,5 +29,4 @@ const CenteredLogo = styled.div`
 const LogoImage = styled.img`
   width: 80px;
   height: 60px;
-  margin: ${theme.spacing.md};
 `;
