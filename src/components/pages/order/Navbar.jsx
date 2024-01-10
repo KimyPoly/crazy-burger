@@ -8,7 +8,7 @@ export default function Navbar({username}) {
   return (
    <NavBarStyled>
      <div className="navLogo">
-      <Logo/>
+      <Logo className="logo-order" onClick={() => window.location.reload()}/>
      </div>
 
      <div className="navRight">
@@ -33,6 +33,9 @@ const NavBarStyled = styled.div`
   padding-right: 30px;
   border-top-left-radius: ${theme.borderRadius.extraRound};
   border-top-right-radius: ${theme.borderRadius.extraRound};
+  .logo-order {
+    cursor: pointer;
+  }
 
 
     /* .admin-button {

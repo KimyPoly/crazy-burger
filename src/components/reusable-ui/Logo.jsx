@@ -1,10 +1,10 @@
 import styled from "styled-components"
 import { theme } from '../../theme'
 
-export default function Logo({className}) {
+export default function Logo({className, onClick}) {
 
   return (
-    <CenteredLogo className={className}>
+    <CenteredLogo className={className} onClick={onClick}>
       <h1>CRAZY</h1>
       <LogoImage src="/images/logo-orange.png" alt="Logo" />
       <h1>BURGER</h1>
