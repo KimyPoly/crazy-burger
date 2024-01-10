@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { theme } from "/Users/kim/crazy-burger/src/theme"
+import { theme } from "../../../theme"
 
 export default function Main() {
   return (

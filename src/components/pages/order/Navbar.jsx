@@ -1,7 +1,7 @@
 import Logo from "../../reusable-ui/Logo.jsx"
 import styled from 'styled-components'
 import Profile from "./Profile.jsx";
-import { theme } from "/Users/kim/crazy-burger/src/theme"
+import { theme } from "../../../theme"
 
 export default function Navbar({username}) {
 
