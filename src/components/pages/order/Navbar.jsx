@@ -1,17 +1,21 @@
-import { Link } from "react-router-dom";
 import Logo from "../../reusable-ui/Logo.jsx"
 import styled from 'styled-components'
+import Profile from "./Profile.jsx";
 
-export default function Navbar({username}) {
+export default function Navbar() {
 
   return (
    <NavBarStyled>
      <div className="navLogo">
       <Logo/>
      </div>
+
      <div className="navRight">
-      <h3>Hey, {username}</h3>
-      <Link to="/">Se déconnecter</Link>
+      {/* <div className="admin-button">
+        Admin button
+      </div> */}
+
+     <Profile/>
      </div>
    </NavBarStyled>
   )
@@ -24,13 +28,10 @@ const NavBarStyled = styled.div`
   display: flex;
   justify-content: space-between;
   padding-left: 20px;
-  .navRight {
-    color: black;
+  padding-right: 30px;
 
-  }
-
-  .navLogo {
-
-  }
-
-`;
+ 
+    /* .admin-button {
+      color: orange;
+    } */
+`
