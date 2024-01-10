@@ -1,11 +1,13 @@
+import { useParams } from "react-router-dom";
 import styled from 'styled-components'
-import Navbar from "/Users/kim/crazy-burger/src/components/pages/Navbar.jsx"
+import Navbar from "./Navbar.jsx"
 import { theme } from '/Users/kim/crazy-burger/src/theme'
+import Main from './Main.jsx'
 
 
 export default function OrderPage() {
   //state
-
+  const {username} = useParams()
   // comportement
 
   // affichage
@@ -13,9 +15,8 @@ export default function OrderPage() {
 
     <OrderPageStyled>
       <div className='container'>
-        <Navbar/>
-        <div className="main">
-        </div>
+        <Navbar username ={username}/>
+        <Main/>
       </div >
     </OrderPageStyled>
 
@@ -36,5 +37,6 @@ const OrderPageStyled = styled.div`
     width: 1400px;
     background-color: red;
     border-radius: ${theme.borderRadius.round};
+
   }
 `

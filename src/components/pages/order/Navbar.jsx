@@ -1,10 +1,9 @@
-import { Link, useParams } from "react-router-dom";
-import Logo from "../reusable-ui/Logo.jsx"
+import { Link } from "react-router-dom";
+import Logo from "../../reusable-ui/Logo.jsx"
 import styled from 'styled-components'
 
-export default function Navbar() {
+export default function Navbar({username}) {
 
-  const {username} = useParams()
 
   return (
    <NavBarStyled>
