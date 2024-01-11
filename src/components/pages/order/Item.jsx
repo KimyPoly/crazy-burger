@@ -1,7 +1,10 @@
 import styled from 'styled-components'
 import { theme } from "../../../theme"
+import PrimaryButton from '../../reusable-ui/PrimaryButton';
 
 export default function Item({ id, imageSource, title, price, quantity, isAvailable, isAdvertised }) {
+
+
   return (
     <ItemStyled>
       <img src={imageSource} alt={title} />
@@ -9,8 +12,8 @@ export default function Item({ id, imageSource, title, price, quantity, isAvaila
         <h3>{title}</h3>
 
         <div className='price-plus-button'>
-          <p>{price}</p>
-          <button>Ajouter</button>
+          <p>{price.toFixed(2)} €</p>
+          <PrimaryButton className="button-order" label={'Ajouter'}/>
         </div>
 
       </div>
@@ -24,11 +27,36 @@ export default function Item({ id, imageSource, title, price, quantity, isAvaila
   color: black;
   border-radius: ${theme.borderRadius.extraRound};
   box-shadow: 0px 8px 20px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px 20px 10px 20px;
+
+    .item-description {
+      height: 105px;
+      width: 200px;
+
+      h3 {
+        font-family: "Amatic SC", cursive;
+        font-size: ${theme.fonts.P4};
+        margin: 0;
+        text-align: left;
+      }
+
+      .price-plus-button {
+      display: flex;
+      justify-content: space-between;
+
+      p{
+        color: ${theme.colors.primary};
+      }
+
+      .button-order {
+         width: 95px;
+      }
+    }
+    }
     img {
       height: 145px;
       width: 200px;
+      padding: 50px 20px 20px 20px;
     }
-    .price-plus-button {
-      display: flex;
-    }
+
  `;
