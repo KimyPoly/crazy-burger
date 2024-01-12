@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { theme } from "../../../theme"
+import { theme } from "../../../../theme"
 import Menu from './Menu';
 // import Basket from './Basket';
 
@@ -14,7 +14,7 @@ export default function Main() {
 }
 const MainStyled = styled.div`
   height: 80vh;
-  padding: 0 40px;
+  /* padding: 0 40px; */
   border-bottom-left-radius: ${theme.borderRadius.extraRound};
   border-bottom-right-radius: ${theme.borderRadius.extraRound};
   background: ${theme.colors.background_white};

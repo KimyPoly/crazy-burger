@@ -27,11 +27,16 @@ const PrimaryButtonStyled = styled.button`
   font-family: "Open Sans";
   font-size: ${theme.fonts.XS};
   color: ${theme.colors.white};
+  border: 1px solid ${theme.colors.primary};
 
 
-  .button:hover {
+  &:hover {
     background-color: ${theme.colors.background_white};
     color: ${theme.colors.primary};
     border-color: ${theme.colors.primary};
   }
+  /* button:active {
+    background-color: ${theme.colors.primary};
+    color: ${theme.colors.white};
+  } */
 `

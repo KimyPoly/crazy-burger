@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { theme } from "../../../theme"
-import PrimaryButton from '../../reusable-ui/PrimaryButton';
+import { theme } from "../../../../theme"
+import PrimaryButton from '../../../reusable-ui/PrimaryButton';
 
 export default function Item({ id, imageSource, title, price, quantity, isAvailable, isAdvertised }) {
 
@@ -13,8 +13,12 @@ export default function Item({ id, imageSource, title, price, quantity, isAvaila
         <h3>{title}</h3>
 
         <div className='price-plus-button'>
-          <p>{price.toFixed(2)} €</p>
-          <PrimaryButton className="button-order" label={'Ajouter'}/>
+          <div className='left-description'>
+            <p>{price.toFixed(2)} €</p>
+          </div>
+         <div className='right-description'>
+           <PrimaryButton className="button-order" label={'Ajouter'}/>
+         </ div>
         </div>
 
       </div>
@@ -42,22 +46,34 @@ export default function Item({ id, imageSource, title, price, quantity, isAvaila
       }
 
       .price-plus-button {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 1fr 3fr;
 
-      p{
+
+      .left-description{
         color: ${theme.colors.primary};
       }
 
-      .button-order {
-         width: 50%;
+      .right-description {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: ${theme.fonts.P1};
+
+        .button-order {
+          font-size: ${theme.fonts.XS};
+          cursor: pointer;
+          padding: 12px;
+        }
       }
+
     }
     }
     img {
       height: 145px;
       width: 200px;
       padding: 50px 20px 20px 20px;
+      object-fit: contain;
     }
 
  `;
