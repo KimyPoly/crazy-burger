@@ -8,6 +8,7 @@ export default function Item({ id, imageSource, title, price, quantity, isAvaila
   return (
     <ItemStyled>
       <img src={imageSource} alt={title} />
+
       <div className='item-description'>
         <h3>{title}</h3>
 
@@ -49,7 +50,7 @@ export default function Item({ id, imageSource, title, price, quantity, isAvaila
       }
 
       .button-order {
-         width: 95px;
+         width: 50%;
       }
     }
     }
