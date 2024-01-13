@@ -1,8 +1,9 @@
 import Logo from "../../../reusable-ui/Logo.jsx"
 import styled from 'styled-components'
-import Profile from "./Profile.jsx";
+import Profile from "./Profile.jsx"
 import { theme } from "../../../../theme/index.jsx"
-import ToggleButton from "../../../ToggleButton.jsx";
+import ToggleButton from "../../../ToggleButton.jsx"
+// import "react-toastify/dist/ReactToastify.css"
 
 export default function Navbar({username}) {
 
