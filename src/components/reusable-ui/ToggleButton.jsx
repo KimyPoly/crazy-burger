@@ -1,12 +1,11 @@
-import React from "react"
 import styled from "styled-components"
-import { theme } from "../theme"
+import { theme } from "../../theme"
 
 export default function ToggleButton({
   isChecked,
   onToggle,
-  labelIfChecked = "Désactiver le mode Admin",
-  labelIfUnchecked = "Activer le mode Admin",
+  labelIfChecked ="Fermer",
+  labelIfUnchecked = "Ouvrir",
 }) {
   return (
     <ToggleButtonStyled>
@@ -28,10 +27,10 @@ export default function ToggleButton({
 }
 
 const ToggleButtonStyled = styled.div`
-  /* border: 1px solid red; */
 
   display: flex;
   margin-right: 10px;
+
   input[type="checkbox"] {
     // Hides the square box but keeps the core "toggle functionality"
     &.toggle {

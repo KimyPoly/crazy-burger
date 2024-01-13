@@ -2,20 +2,24 @@ import Logo from "../../../reusable-ui/Logo.jsx"
 import styled from 'styled-components'
 import Profile from "./Profile.jsx"
 import { theme } from "../../../../theme/index.jsx"
-import ToggleButton from "../../../ToggleButton.jsx"
-// import "react-toastify/dist/ReactToastify.css"
+import ToggleButton from "../../../reusable-ui/ToggleButton.jsx"
 
-export default function Navbar({username}) {
+export default function Navbar({username, onToggleSuccess}) {
+
 
   return (
    <NavBarStyled>
      <div className="navLogo">
       <Logo className="logo-order" onClick={() => window.location.reload()}/>
      </div>
-
      <div className="navRight">
       <div className="admin-button">
-        <ToggleButton/>
+
+      <ToggleButton
+          onToggle={onToggleSuccess}
+          labelIfChecked="Désactiver le mode Admin"
+          labelIfUnchecked="Activer le mode Admin"
+        />
       </div>
 
      <Profile username={username}/>
@@ -41,11 +45,10 @@ const NavBarStyled = styled.div`
 
   .navRight {
     display: flex;
-  }
-
-
     .admin-button {
       color: orange;
       margin-right: 20px;
     }
+  }
+
 `
