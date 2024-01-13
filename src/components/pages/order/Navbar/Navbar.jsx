@@ -2,6 +2,7 @@ import Logo from "../../../reusable-ui/Logo.jsx"
 import styled from 'styled-components'
 import Profile from "./Profile.jsx";
 import { theme } from "../../../../theme/index.jsx"
+import ToggleButton from "../../../ToggleButton.jsx";
 
 export default function Navbar({username}) {
 
@@ -12,9 +13,9 @@ export default function Navbar({username}) {
      </div>
 
      <div className="navRight">
-      {/* <div className="admin-button">
-        Admin button
-      </div> */}
+      <div className="admin-button">
+        <ToggleButton/>
+      </div>
 
      <Profile username={username}/>
      </div>
@@ -37,8 +38,13 @@ const NavBarStyled = styled.div`
     cursor: pointer;
   }
 
+  .navRight {
+    display: flex;
+  }
 
-    /* .admin-button {
+
+    .admin-button {
       color: orange;
-    } */
+      margin-right: 20px;
+    }
 `
