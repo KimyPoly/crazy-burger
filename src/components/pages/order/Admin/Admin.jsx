@@ -14,5 +14,4 @@ const AdminStyled = styled.div`
   width: 100%;
   height: 290px;
 
-
 `;

@@ -8,7 +8,6 @@ export default function AdminMain() {
   )
 }
 const AdminMainStyled = styled.div`
-  height: 245px;
-  background: yellow;
-
+  height: 250px;
+  box-shadow: 0px 8px 20px 8px rgba(0, 0, 0, 0.2);
 `;
