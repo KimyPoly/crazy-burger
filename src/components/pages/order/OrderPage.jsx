@@ -3,10 +3,11 @@ import styled from 'styled-components'
 import Navbar from "./Navbar/Navbar.jsx"
 import { theme } from '../../../theme'
 import Main from './Main/Main.jsx'
-import { toast,  ToastContainer } from "react-toastify";
+import { toast,  ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
-import { useState } from "react";
-import { FaUserSecret } from "react-icons/fa";
+import { useState } from "react"
+import { FaUserSecret } from "react-icons/fa"
+
 
 
 export default function OrderPage() {
