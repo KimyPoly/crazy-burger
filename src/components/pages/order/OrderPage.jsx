@@ -9,11 +9,15 @@ import { useState } from "react"
 import { FaUserSecret } from "react-icons/fa"
 
 
-
 export default function OrderPage() {
   //state
   const {username} = useParams()
   const [isModeAdmin, setIsModeAdmin] = useState(false)
+
+  const adminContextValue = {
+    isModeAdmin,
+    setIsModeAdmin
+  }
   // comportement
 
   const toastNotif = () => {
