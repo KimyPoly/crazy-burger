@@ -1,4 +1,3 @@
-import { useParams } from "react-router-dom";
 import styled from 'styled-components'
 import Navbar from "./Navbar/Navbar.jsx"
 import { theme } from '../../../theme'
@@ -7,11 +6,11 @@ import { toast,  ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import { useState } from "react"
 import { FaUserSecret } from "react-icons/fa"
-
+import  AdminContext  from "../../../context/AdminContext"
 
 export default function OrderPage() {
   //state
-  const {username} = useParams()
+
   const [isModeAdmin, setIsModeAdmin] = useState(false)
 
   const adminContextValue = {
@@ -41,13 +40,15 @@ export default function OrderPage() {
   // affichage
   return (
 
-    <OrderPageStyled>
-      <div className='container'>
-      <ToastContainer/>
-        <Navbar username ={username} onToggleSuccess={toastNotif}/>
-        <Main/>
-      </div >
-    </OrderPageStyled>
+   <AdminContext.Provider value={adminContextValue}>
+     <OrderPageStyled>
+       <div className='container'>
+       <ToastContainer/>
+         <Navbar onToggleSuccess={toastNotif}/>
+         <Main/>
+       </div >
+     </OrderPageStyled>
+   </AdminContext.Provider>
 
   )
 }
