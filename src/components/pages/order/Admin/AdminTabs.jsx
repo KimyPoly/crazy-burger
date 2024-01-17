@@ -1,37 +1,48 @@
 import styled from 'styled-components'
 import { theme } from "../../../../theme"
+import Tab from "../../../reusable-ui/Tab.jsx";
+import { FiChevronDown, FiChevronUp  } from "react-icons/fi";
+import { useContext } from 'react';
+import  OrderContext from "../../../../context/OrderContext.jsx";
 
 export default function AdminTabs() {
+
+  const {isCollapsed, setIsCollapsed } = useContext(OrderContext)
+
+  const handleClick = () => {
+    setIsCollapsed(!isCollapsed)
+  }
+
   return (
     <AdminTabsStyled>
-      <div className='pop-window'>
-        <a href="">+</a>
-        </div>
-      <div className='add-item'>
+     <Tab Icon={<FiChevronDown/>} onClick={handleClick}/>
+      {/* <div className='add-item'>
         <a href="">Ajouter un produit</a>
       </div>
       <div className='modify-item'>
         <a href="">Modifier un produit</a>
-      </div>
+      </div> */}
     </AdminTabsStyled>
   )
 }
 const AdminTabsStyled = styled.div`
   display: flex;
+  padding: 0 20px;
   /* align-items: center; */
-  background: ${theme.colors.background_white};
-  width: 40%;
-  height: 40px;
-  margin-left: 30px;
-  border: 1px solid ${theme.colors.greyLight} ;
-  border-top-left-radius: ${theme.borderRadius.round};
-  border-top-right-radius: ${theme.borderRadius.round};
-  box-shadow: 0px 8px 20px 8px rgba(0, 0, 0, 0.2) ;
-  .pop-window {
+
+
+
+
+
+
+
+
+  /* .pop-window {
     width: 10%;
-    a{
-      text-decoration: none;
+    button{
+      border: none;
       color: ${theme.colors.greyMedium};
+
     }
   }
   .add-item {
@@ -54,6 +65,6 @@ const AdminTabsStyled = styled.div`
     &:hover {
       text-decoration: underline;
     }
-  }
+  } */
 
 `;
