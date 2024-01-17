@@ -6,16 +6,19 @@ import { toast,  ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import { useState } from "react"
 import { FaUserSecret } from "react-icons/fa"
-import  AdminContext  from "../../../context/AdminContext"
+import  AdminContext  from "../../../context/OrderContext.jsx"
 
 export default function OrderPage() {
   //state
 
   const [isModeAdmin, setIsModeAdmin] = useState(false)
+  const [isCollapsed, setIsCollapsed] = useState(false)
 
-  const adminContextValue = {
+  const orderContextValue = {
     isModeAdmin,
-    setIsModeAdmin
+    setIsModeAdmin,
+    isCollapsed,
+    setIsCollapsed
   }
   // comportement
 
@@ -40,7 +43,7 @@ export default function OrderPage() {
   // affichage
   return (
 
-   <AdminContext.Provider value={adminContextValue}>
+   <AdminContext.Provider value={orderContextValue}>
      <OrderPageStyled>
        <div className='container'>
        <ToastContainer/>

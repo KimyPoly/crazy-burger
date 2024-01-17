@@ -4,11 +4,11 @@ import Menu from './Menu';
 import Admin from '../Admin/Admin';
 // import Basket from './Basket';
 import { useContext } from "react"
-import  AdminContext  from "../../../../context/AdminContext.jsx";
+import  OrderContext  from "../../../../context/OrderContext.jsx";
 
 export default function Main() {
 
-  const {isModeAdmin, setIsModeAdmin} = useContext(AdminContext)
+  const {isModeAdmin, setIsModeAdmin} = useContext(OrderContext)
 
   return (
     <MainStyled>
