@@ -1,14 +1,22 @@
 import styled from 'styled-components'
 import { theme } from "../../../../theme"
 import Menu from './Menu';
+import Admin from '../Admin/Admin';
 // import Basket from './Basket';
-
+import { useContext } from "react"
+import  OrderContext  from "../../../../context/OrderContext.jsx";
 
 export default function Main() {
+
+  const {isModeAdmin, setIsModeAdmin} = useContext(OrderContext)
+
   return (
     <MainStyled>
       {/* <Basket/> */}
-      <Menu/>
+     <div className='menu-plus-admin'>
+       <Menu/>
+      {isModeAdmin && <Admin/>}
+     </div>
     </MainStyled>
   )
 }
@@ -20,4 +28,12 @@ const MainStyled = styled.div`
   background: ${theme.colors.background_white};
   box-shadow: 0px 8px 20px 8px rgba(0, 0, 0, 0.2) inset;
   overflow-y: auto;
+  display: grid;
+  grid-template-columns:  1fr;
+
+  .menu-plus-admin {
+    position: relative;
+    overflow-y: hidden;
+    display: grid;
+  }
 `;

@@ -4,7 +4,9 @@ import Profile from "./Profile.jsx"
 import { theme } from "../../../../theme/index.jsx"
 import ToggleButton from "../../../reusable-ui/ToggleButton.jsx"
 
-export default function Navbar({username, onToggleSuccess}) {
+
+export default function Navbar({onToggleSuccess, isModeAdmin}) {
+
 
 
   return (
@@ -16,13 +18,14 @@ export default function Navbar({username, onToggleSuccess}) {
       <div className="admin-button">
 
       <ToggleButton
+         isChecked={isModeAdmin}
           onToggle={onToggleSuccess}
           labelIfChecked="Désactiver le mode Admin"
           labelIfUnchecked="Activer le mode Admin"
         />
       </div>
 
-     <Profile username={username}/>
+     <Profile />
      </div>
    </NavBarStyled>
   )

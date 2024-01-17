@@ -1,18 +1,25 @@
-import { useParams } from "react-router-dom";
 import styled from 'styled-components'
 import Navbar from "./Navbar/Navbar.jsx"
 import { theme } from '../../../theme'
 import Main from './Main/Main.jsx'
-import { toast,  ToastContainer } from "react-toastify";
+import { toast,  ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
-import { useState } from "react";
-import { FaUserSecret } from "react-icons/fa";
-
+import { useState } from "react"
+import { FaUserSecret } from "react-icons/fa"
+import  AdminContext  from "../../../context/OrderContext.jsx"
 
 export default function OrderPage() {
   //state
-  const {username} = useParams()
+
   const [isModeAdmin, setIsModeAdmin] = useState(false)
+  const [isCollapsed, setIsCollapsed] = useState(false)
+
+  const orderContextValue = {
+    isModeAdmin,
+    setIsModeAdmin,
+    isCollapsed,
+    setIsCollapsed
+  }
   // comportement
 
   const toastNotif = () => {
@@ -36,13 +43,15 @@ export default function OrderPage() {
   // affichage
   return (
 
-    <OrderPageStyled>
-      <div className='container'>
-      <ToastContainer/>
-        <Navbar username ={username} onToggleSuccess={toastNotif}/>
-        <Main/>
-      </div >
-    </OrderPageStyled>
+   <AdminContext.Provider value={orderContextValue}>
+     <OrderPageStyled>
+       <div className='container'>
+       <ToastContainer/>
+         <Navbar onToggleSuccess={toastNotif}/>
+         <Main/>
+       </div >
+     </OrderPageStyled>
+   </AdminContext.Provider>
 
   )
 }
