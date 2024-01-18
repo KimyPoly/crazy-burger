@@ -4,7 +4,7 @@ import { theme } from "../../../../../theme"
 export default function Footer() {
   return (
     <FooterStyled>
-      <p>Footer</p>
+      <p>Made with 🧡</p>
     </FooterStyled>
   )
 }
