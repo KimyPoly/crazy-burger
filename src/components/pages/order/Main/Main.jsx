@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { theme } from "../../../../theme"
 import Menu from './Menu';
 import Admin from '../Admin/Admin';
-import Basket from './Basket';
+import Basket from './Basket/Basket.jsx';
 import { useContext } from "react"
 import  OrderContext  from "../../../../context/OrderContext.jsx";
 
