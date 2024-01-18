@@ -16,6 +16,9 @@ export default function Basket() {
 const BasketStyled = styled.div`
   background: ${theme.colors.background_white};
   position: relative;
-  box-shadow: 0px 8px 20px 8px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0px 8px 20px 8px rgba(0, 0, 0, 0.2) ;
   font-family: "Amatic SC", cursive;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 `;

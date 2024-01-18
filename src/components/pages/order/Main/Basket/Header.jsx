@@ -5,7 +5,7 @@ export default function Header({amountToPay}) {
   return (
     <HeaderStyled>
       <p className='total'>Total</p>
-      <p className='amount'>Price {amountToPay}</p>
+      <p className='amount'> {amountToPay} €</p>
     </HeaderStyled>
   )
 }
