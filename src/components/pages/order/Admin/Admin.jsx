@@ -21,5 +21,4 @@ const AdminStyled = styled.div`
   left: 0;
   right: 0;
   position: absolute; */
-
 `;
