@@ -16,23 +16,20 @@ export default function AdminTabs() {
   return (
     <AdminTabsStyled>
      <Tab Icon={<FiChevronDown/>} onClick={handleClick}/>
-      {/* <div className='add-item'>
+      <div className='add-item'>
         <a href="">Ajouter un produit</a>
       </div>
       <div className='modify-item'>
         <a href="">Modifier un produit</a>
-      </div> */}
+      </div>
     </AdminTabsStyled>
   )
 }
 const AdminTabsStyled = styled.div`
   display: flex;
   padding: 0 20px;
+  width: 50%;
   /* align-items: center; */
-
-
-
-
 
 
 
@@ -44,7 +41,7 @@ const AdminTabsStyled = styled.div`
       color: ${theme.colors.greyMedium};
 
     }
-  }
+  } */
   .add-item {
     width: 45%;
     background: black;
@@ -65,6 +62,6 @@ const AdminTabsStyled = styled.div`
     &:hover {
       text-decoration: underline;
     }
-  } */
+  }
 
 `;
