@@ -30,7 +30,7 @@ const MainStyled = styled.div`
   overflow-y: auto;
   display: grid;
   grid-template-columns: 1fr 4fr;
-
+  
   .menu-plus-admin {
     position: relative;
     overflow-y: hidden;
