@@ -2,9 +2,9 @@ import styled from 'styled-components'
 import { theme } from "../../../../theme"
 import PrimaryButton from '../../../reusable-ui/PrimaryButton';
 
-export default function Item({ id, imageSource, title, price, quantity, isAvailable, isAdvertised }) {
+export default function Item({ imageSource, title, price }) {
 
-
+ 
   return (
     <ItemStyled>
       <img src={imageSource} alt={title} />

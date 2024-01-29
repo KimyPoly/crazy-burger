@@ -3,18 +3,24 @@ import { theme } from "../../../../theme"
 import Menu from './Menu';
 import Admin from '../Admin/Admin';
 import Basket from './Basket/Basket.jsx';
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import  OrderContext  from "../../../../context/OrderContext.jsx";
 
 export default function Main() {
 
   const {isModeAdmin, setIsModeAdmin} = useContext(OrderContext)
+// add Item to basket
+  const [basketItems, setBasketItems] = useState([]);
 
+  const addToBasket = (item) => {
+    setBasketItems([...basketItems, item]);
+  }
+//
   return (
     <MainStyled>
       <Basket/>
      <div className='menu-plus-admin'>
-       <Menu/>
+       <Menu key={menuItem.id} {...menuItem} onAddToBasket={addToBasket}/>
        {isModeAdmin && <Admin/>}
      </div>
     </MainStyled>
