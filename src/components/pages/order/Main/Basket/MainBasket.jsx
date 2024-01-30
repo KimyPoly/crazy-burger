@@ -1,10 +1,18 @@
 import styled from 'styled-components'
 import { theme } from "../../../../../theme"
 
-export default function MainBasket() {
+export default function MainBasket({items}) {
   return (
     <MainBasketStyled>
       <span className='empty-message'>Votre panier est vide.</span>
+
+      <ul>
+        {items.map((item) => (
+          <li key={item.id}>
+            {item.name} - {item.price}
+          </li>
+        ))}
+      </ul>
     </MainBasketStyled>
   )
 }
