@@ -5,18 +5,28 @@ export default function BasketProducts({basket}) {
   return (
     <BasketProductsStyled>
       {basket.map((basketProduct) => (
-        <BasketCard key={basketProduct.id} {...basketProduct}/>
+        <BasketCard className='basket-card' key={basketProduct.id} {...basketProduct}/>
       ))}
     </BasketProductsStyled>
   )
 }
 const BasketProductsStyled = styled.div`
-  background: pink;
+
+  height: 70vh;
+  width: 100%;
+  flex: 1;
   color: black;
   text-align: center;
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-y: scroll;
+  position: relative;
+
+
+  .basket-card {
+    margin: 10px 16px;
+    box-sizing: border-box;
+  }
 `

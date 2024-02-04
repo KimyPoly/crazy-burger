@@ -10,8 +10,8 @@ export default function Footer() {
 }
 const FooterStyled = styled.div`
   height: 70px;
-    width: 100%;
-    background: black;
-    position: absolute;
-    bottom: 0;
+  width: 100%;
+  background: black;
+  /* position: absolute; */
+  bottom: 0;
 `;
