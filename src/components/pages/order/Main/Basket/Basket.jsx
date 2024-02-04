@@ -11,10 +11,12 @@ export default function Basket() {
 
   const {basket} = useContext(OrderContext)
 
+const isBasketEmpty = basket.length === 0
+
   return (
     <BasketStyled>
       <Header amountToPay={0}/>
-      {/* <EmptyBasket basket={basket}/> */}
+      { isBasketEmpty ? <EmptyBasket/> : <BasketProducts/> }
       <BasketProducts/>
       <Footer/>
     </BasketStyled>

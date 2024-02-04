@@ -1,4 +1,4 @@
-import { EMPTY_PRODUCT } from "../enums/product"
+import { EMPTY_PRODUCT } from "../../../../enums/product.jsx"
 
 export const EMPTY = []
 

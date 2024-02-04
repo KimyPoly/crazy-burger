@@ -7,18 +7,21 @@ import "react-toastify/dist/ReactToastify.css"
 import { useState } from "react"
 import { FaUserSecret } from "react-icons/fa"
 import  AdminContext  from "../../../context/OrderContext.jsx"
+import { useBasket } from '../../../hooks/useBasket.jsx'
 
 export default function OrderPage() {
   //state
 
   const [isModeAdmin, setIsModeAdmin] = useState(false)
   const [isCollapsed, setIsCollapsed] = useState(false)
+  const {basket} = useBasket()
 
   const orderContextValue = {
     isModeAdmin,
     setIsModeAdmin,
     isCollapsed,
-    setIsCollapsed
+    setIsCollapsed,
+    basket
   }
   // comportement
 
