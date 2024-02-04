@@ -2,13 +2,18 @@ import styled from 'styled-components'
 import { theme } from "../../../../../theme"
 import Header from './Header';
 import Footer from './Footer';
-import MainBasket from './MainBasket';
+import { useContext } from 'react';
+import OrderContext from '../../../../../context/OrderContext';
+import EmptyBasket from './EmptyBasket';
 
 export default function Basket() {
+
+  const {basket} = useContext(OrderContext)
+
   return (
     <BasketStyled>
       <Header amountToPay={0}/>
-      <MainBasket/>
+      <EmptyBasket basket={basket}/>
       <Footer/>
     </BasketStyled>
   )

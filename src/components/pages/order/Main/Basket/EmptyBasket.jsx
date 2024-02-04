@@ -1,22 +1,14 @@
 import styled from 'styled-components'
 import { theme } from "../../../../../theme"
 
-export default function MainBasket({items}) {
+export default function EmptyBasket() {
   return (
-    <MainBasketStyled>
+    <EmptyBasketStyled>
       <span className='empty-message'>Votre panier est vide.</span>
-
-      <ul>
-        {items.map((item) => (
-          <li key={item.id}>
-            {item.name} - {item.price}
-          </li>
-        ))}
-      </ul>
-    </MainBasketStyled>
+    </EmptyBasketStyled>
   )
 }
-const MainBasketStyled = styled.div`
+const EmptyBasketStyled = styled.div`
   /* box-shadow: 0px 8px 20px 8px rgba(0, 0, 0, 0.2) inset; */
   flex: 1;
 
