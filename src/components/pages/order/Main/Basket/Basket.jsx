@@ -5,6 +5,7 @@ import Footer from './Footer';
 import { useContext } from 'react';
 import OrderContext from '../../../../../context/OrderContext';
 import EmptyBasket from './EmptyBasket';
+import BasketProducts from './BasketProducts';
 
 export default function Basket() {
 
@@ -13,7 +14,8 @@ export default function Basket() {
   return (
     <BasketStyled>
       <Header amountToPay={0}/>
-      <EmptyBasket basket={basket}/>
+      {/* <EmptyBasket basket={basket}/> */}
+      <BasketProducts/>
       <Footer/>
     </BasketStyled>
   )
