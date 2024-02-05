@@ -2,25 +2,26 @@ import styled from 'styled-components'
 import { theme } from "../../../../theme"
 import PrimaryButton from '../../../reusable-ui/PrimaryButton';
 
-export default function Item({ imageSource, title, price }) {
+export default function Item({ imageSource, title, price, item, onAddToBasket  }) {
 
- 
+
   return (
     <ItemStyled>
       <img src={imageSource} alt={title} />
 
       <div className='item-description'>
         <h3>{title}</h3>
-
         <div className='price-plus-button'>
+
           <div className='left-description'>
             <p>{price.toFixed(2)} €</p>
           </div>
-         <div className='right-description'>
-           <PrimaryButton className="button-order" label={'Ajouter'}/>
-         </ div>
-        </div>
 
+         <div className='right-description'>
+           <PrimaryButton className="button-order" label={'Ajouter'} onClick={() => onAddToBasket(item)}/>
+         </ div>
+
+        </div>
       </div>
     </ItemStyled>
   )

@@ -11,7 +11,6 @@ export default function BasketProducts({basket}) {
   )
 }
 const BasketProductsStyled = styled.div`
-
   height: 70vh;
   width: 100%;
   flex: 1;

@@ -10,17 +10,17 @@ export default function Main() {
 
   const {isModeAdmin, setIsModeAdmin} = useContext(OrderContext)
 // add Item to basket
-  const [basketItems, setBasketItems] = useState([]);
+  // const [basketItems, setBasketItems] = useState([]);
 
-  const addToBasket = (item) => {
-    setBasketItems([...basketItems, item]);
-  }
+  // const addToBasket = (item) => {
+  //   setBasketItems([...basketItems, item]);
+  // }
 //
   return (
     <MainStyled>
       <Basket/>
      <div className='menu-plus-admin'>
-       <Menu key={menuItem.id} {...menuItem} onAddToBasket={addToBasket}/>
+       <Menu />
        {isModeAdmin && <Admin/>}
      </div>
     </MainStyled>
