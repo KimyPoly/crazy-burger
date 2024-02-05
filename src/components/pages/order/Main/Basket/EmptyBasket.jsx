@@ -1,17 +1,16 @@
 import styled from 'styled-components'
 import { theme } from "../../../../../theme"
 
-export default function MainBasket() {
+export default function EmptyBasket() {
   return (
-    <MainBasketStyled>
+    <EmptyBasketStyled>
       <span className='empty-message'>Votre panier est vide.</span>
-    </MainBasketStyled>
+    </EmptyBasketStyled>
   )
 }
-const MainBasketStyled = styled.div`
+const EmptyBasketStyled = styled.div`
   /* box-shadow: 0px 8px 20px 8px rgba(0, 0, 0, 0.2) inset; */
   flex: 1;
-
 
   .empty-message {
     color: black;
@@ -19,7 +18,7 @@ const MainBasketStyled = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1;;
+    flex: 1;
     line-height: 2;
     font-size: ${theme.fonts.P3};
   }

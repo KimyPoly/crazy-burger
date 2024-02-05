@@ -1,4 +1,4 @@
-import { createContext} from "react";
+import { createContext} from "react"
 
 
 const OrderContext = createContext({
@@ -6,7 +6,9 @@ const OrderContext = createContext({
   setIsModeAdmin: () => {},
 
   isCollapsed: false,
-  setIsCollapsed: () => {}
-});
+  setIsCollapsed: () => {},
+
+  basket: [],
+})
 
 export default OrderContext

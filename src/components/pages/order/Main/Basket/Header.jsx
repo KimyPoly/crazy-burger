@@ -10,13 +10,13 @@ export default function Header({amountToPay}) {
   )
 }
 const HeaderStyled = styled.div`
-   height: 70px;
-    width: 100%;
-    background: black;
-    top: 0;
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    font-size: ${theme.fonts.P3};
-    color: ${theme.colors.primary}
-`;
+  height: 70px;
+  width: 100%;
+  background: black;
+  top: 0;
+  /* position: absolute; */
+  display: flex;
+  justify-content: space-between;
+  font-size: ${theme.fonts.P3};
+  color: ${theme.colors.primary};
+`

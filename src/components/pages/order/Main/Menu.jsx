@@ -6,6 +6,7 @@ import styled from 'styled-components'
 export default function Menu() {
 
   const [menu, setMenu] = useState(fakeMenu2)
+  
   return (
     <MenuStyled>
       {menu.map((menuItem) => (
