@@ -6,24 +6,31 @@ import { toast,  ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import { useState } from "react"
 import { FaUserSecret } from "react-icons/fa"
-import  AdminContext  from "../../../context/OrderContext.jsx"
 import { useBasket } from '../../../hooks/useBasket.jsx'
+import { useMenu } from '../../../hooks/useMenu.jsx'
+import  OrderContext  from "../../../context/OrderContext.jsx"
 
 export default function OrderPage() {
   //state
 
   const [isModeAdmin, setIsModeAdmin] = useState(false)
   const [isCollapsed, setIsCollapsed] = useState(false)
-  const {basket} = useBasket()
+  const {basket, handleAddToBasket} = useBasket()
+  const { menu, handleAdd } = useMenu()
+  // const {menu} = useContext(OrderContext)
 
   const orderContextValue = {
     isModeAdmin,
     setIsModeAdmin,
     isCollapsed,
     setIsCollapsed,
-    basket
+    basket,
+    handleAddToBasket,
+    menu,
+    handleAdd
   }
   // comportement
+
 
   const toastNotif = () => {
 
@@ -46,7 +53,7 @@ export default function OrderPage() {
   // affichage
   return (
 
-   <AdminContext.Provider value={orderContextValue}>
+   <OrderContext.Provider value={orderContextValue}>
      <OrderPageStyled>
        <div className='container'>
        <ToastContainer/>
@@ -54,7 +61,7 @@ export default function OrderPage() {
          <Main/>
        </div >
      </OrderPageStyled>
-   </AdminContext.Provider>
+   </OrderContext.Provider>
 
   )
 }
