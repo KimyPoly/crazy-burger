@@ -5,7 +5,9 @@ export default function BasketProducts({basket}) {
   return (
     <BasketProductsStyled>
       {basket.map((basketProduct) => (
-        <BasketCard className='basket-card' key={basketProduct.id} {...basketProduct}/>
+        <div key={basketProduct.id}>
+          <BasketCard className='basket-card' {...basketProduct}/>
+        </div>
       ))}
     </BasketProductsStyled>
   )
@@ -18,8 +20,6 @@ const BasketProductsStyled = styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   overflow-y: scroll;
   position: relative;
 
