@@ -35,9 +35,6 @@ export default function BasketCard({
 }
 
 const BasketCardStyled = styled.div`
-  cursor: ${({ isModeAdmin }) => (isModeAdmin ? "pointer" : "auto")};
-  /* border: 1px solid red; */
-  /* width: 90%; */
   box-sizing: border-box;
   height: 86px;
   padding: 8px 16px;
@@ -48,12 +45,12 @@ const BasketCardStyled = styled.div`
   background: ${theme.colors.white};
   box-shadow: ${theme.shadows.medium};
 
-  /* position: relative; */
+  position: relative;
 
   .image {
     box-sizing: border-box;
     height: 70px;
-    /* border: 1px solid red; */
+
     img {
       padding: 5px;
       box-sizing: border-box;
@@ -66,8 +63,6 @@ const BasketCardStyled = styled.div`
   .text-info {
     user-select: none;
     box-sizing: border-box;
-    /* background: green; */
-    /* border: 1px solid green; */
     display: grid;
     grid-template-columns: 70% 1fr;
     font-size: ${theme.fonts.P0};
@@ -77,11 +72,10 @@ const BasketCardStyled = styled.div`
       display: grid;
       grid-template-rows: 60% 40%;
       margin-left: 21px;
-      /* align-items: center; */
+
       .title {
         display: flex;
         align-items: center;
-        /* background: yellow; */
         font-size: ${theme.fonts.P3};
         line-height: 32px;
         font-weight: ${theme.weights.bold};
@@ -97,17 +91,13 @@ const BasketCardStyled = styled.div`
       }
 
       .price {
-        /* background: blue; */
         font-size: ${theme.fonts.P0};
         font-weight: ${theme.weights.medium};
-        /* color: ${theme.colors.white}; */
       }
     }
 
     .quantity {
       box-sizing: border-box;
-      /* border: 1px solid lightblue; */
-      /* background: lightblue; */
       font-weight: ${theme.weights.medium};
       display: flex;
       align-items: center;
@@ -123,9 +113,9 @@ const BasketCardStyled = styled.div`
   }
 
   /* hover de la card */
-  :hover {
+  &:hover {
+
     .delete-button {
-      /* border: 1px solid red; */
       border: none;
       box-sizing: border-box;
       position: absolute;
