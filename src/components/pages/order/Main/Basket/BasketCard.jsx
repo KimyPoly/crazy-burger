@@ -37,7 +37,7 @@ export default function BasketCard({
 const BasketCardStyled = styled.div`
   cursor: ${({ isModeAdmin }) => (isModeAdmin ? "pointer" : "auto")};
   /* border: 1px solid red; */
-  width: 90%;
+  /* width: 90%; */
   box-sizing: border-box;
   height: 86px;
   padding: 8px 16px;
