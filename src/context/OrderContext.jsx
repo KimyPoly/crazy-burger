@@ -1,4 +1,4 @@
-import { createContext} from "react"
+import {createContext} from "react"
 
 
 const OrderContext = createContext({
@@ -9,6 +9,15 @@ const OrderContext = createContext({
   setIsCollapsed: () => {},
 
   basket: [],
+  handleAdddToBasket: () => {},
+  handleDeleteBasketProduct: () => {},
+
+  menu: [],
+  handleAdd: () => {},
+  handleDelete: () => {},
+  handleEdit: () => {},
+  resetMenu: () => {}
+
 })
 
 export default OrderContext

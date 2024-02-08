@@ -6,7 +6,7 @@ import Basket from './Basket/Basket.jsx';
 import { useContext, useState } from "react"
 import  OrderContext  from "../../../../context/OrderContext.jsx";
 
-export default function Main() {
+export default function Main({handleAddButton}) {
 
   const {isModeAdmin, setIsModeAdmin} = useContext(OrderContext)
 // add Item to basket
@@ -20,7 +20,7 @@ export default function Main() {
     <MainStyled>
       <Basket/>
      <div className='menu-plus-admin'>
-       <Menu />
+       <Menu handleAddButton={handleAddButton}/>
        {isModeAdmin && <Admin/>}
      </div>
     </MainStyled>
@@ -36,7 +36,7 @@ const MainStyled = styled.div`
   overflow-y: auto;
   display: grid;
   grid-template-columns: 1fr 4fr;
-  
+
   .menu-plus-admin {
     position: relative;
     overflow-y: hidden;

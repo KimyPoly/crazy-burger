@@ -18,10 +18,10 @@ export default function Navbar({onToggleSuccess, isModeAdmin}) {
       <div className="admin-button">
 
       <ToggleButton
-         isChecked={isModeAdmin}
-          onToggle={onToggleSuccess}
-          labelIfChecked="Désactiver le mode Admin"
-          labelIfUnchecked="Activer le mode Admin"
+        isChecked={isModeAdmin}
+        onToggle={onToggleSuccess}
+        labelIfChecked="Désactiver le mode Admin"
+        labelIfUnchecked="Activer le mode Admin"
         />
       </div>
 

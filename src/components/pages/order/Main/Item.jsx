@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { theme } from "../../../../theme"
 import PrimaryButton from '../../../reusable-ui/PrimaryButton';
 
-export default function Item({ imageSource, title, price, item, onAddToBasket  }) {
+export default function Item({ imageSource, title, price, onAdd }) {
 
 
   return (
@@ -18,7 +18,7 @@ export default function Item({ imageSource, title, price, item, onAddToBasket  }
           </div>
 
          <div className='right-description'>
-           <PrimaryButton className="button-order" label={'Ajouter'} onClick={() => onAddToBasket(item)}/>
+           <PrimaryButton className="button-order" label={'Ajouter'} onClick={onAdd}/>
          </ div>
 
         </div>

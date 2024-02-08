@@ -2,9 +2,9 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import { theme } from '../../theme'
 
-export default function PrimaryButton({label, Icon}) {
+export default function PrimaryButton({label, Icon, onClick}) {
   return (
-    <PrimaryButtonStyled >
+    <PrimaryButtonStyled onClick={onClick}>
     <span> {label} </span>
     {Icon && Icon}
     </PrimaryButtonStyled >
@@ -13,7 +13,7 @@ export default function PrimaryButton({label, Icon}) {
 PrimaryButton.propTypes = {
   label: PropTypes.string.isRequired,
   Icon: PropTypes.element,
-};
+}
 
 const PrimaryButtonStyled = styled.button`
 

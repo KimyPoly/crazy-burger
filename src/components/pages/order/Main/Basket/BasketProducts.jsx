@@ -1,11 +1,21 @@
 import styled from 'styled-components'
 import BasketCard from './BasketCard'
 
-export default function BasketProducts({basket}) {
+export default function BasketProducts({basket, handleDeleteBasketProduct}) {
+
+  const handleOnDelete = (id) => {
+    alert("Le produit sera supprimé du panier")
+    handleDeleteBasketProduct(id)
+  }
   return (
     <BasketProductsStyled>
       {basket.map((basketProduct) => (
-        <BasketCard className='basket-card' key={basketProduct.id} {...basketProduct}/>
+        <div className='basket-card' key={basketProduct.id}>
+          <BasketCard
+            {...basketProduct}
+            onDelete={() => handleOnDelete(basketProduct.id)}
+          />
+        </div>
       ))}
     </BasketProductsStyled>
   )
@@ -18,8 +28,6 @@ const BasketProductsStyled = styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   overflow-y: scroll;
   position: relative;
 
