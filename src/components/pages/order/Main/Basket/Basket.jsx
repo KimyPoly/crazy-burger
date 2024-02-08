@@ -9,7 +9,7 @@ import BasketProducts from './BasketProducts';
 
 export default function Basket() {
 
-  const {basket} = useContext(OrderContext)
+  const {basket, handleDeleteBasketProduct} = useContext(OrderContext)
 
   const isBasketEmpty = basket.length === 0
 
@@ -21,7 +21,7 @@ export default function Basket() {
   return (
     <BasketStyled>
       <Header amountToPay={totalToPay.toFixed(2)}/>
-      { isBasketEmpty ? <EmptyBasket/> : <BasketProducts basket={basket}/> }
+      { isBasketEmpty ? <EmptyBasket/> : <BasketProducts basket={basket} handleDeleteBasketProduct={handleDeleteBasketProduct}/> }
       <Footer/>
     </BasketStyled>
   )

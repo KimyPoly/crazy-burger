@@ -14,4 +14,5 @@ const FooterStyled = styled.div`
   background: black;
   /* position: absolute; */
   bottom: 0;
+  text-align: center;
 `;

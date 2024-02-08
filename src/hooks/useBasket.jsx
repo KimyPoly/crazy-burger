@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { fakeBasket } from "../components/pages/order/Main/fakeBasket.jsx"
-import { deepClone, find, findIndex } from "../utils/array.jsx"
+import { deepClone, find, findIndex, filter} from "../utils/array.jsx"
 
 export const useBasket = () => {
   const [basket, setBasket] = useState(fakeBasket.EMPTY)
@@ -33,6 +33,14 @@ export const useBasket = () => {
     setBasket(basketUpdated)
   }
 
+  const handleDeleteBasketProduct = (idBasketProduct) => {
 
-  return { basket, handleAddToBasket }
+    const basketUpdated = filter(idBasketProduct, basket)
+    setBasket(basketUpdated)
+
+
+  }
+
+
+  return { basket, handleAddToBasket, handleDeleteBasketProduct }
 }

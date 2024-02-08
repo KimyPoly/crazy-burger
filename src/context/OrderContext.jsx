@@ -10,6 +10,7 @@ const OrderContext = createContext({
 
   basket: [],
   handleAdddToBasket: () => {},
+  handleDeleteBasketProduct: () => {},
 
   menu: [],
   handleAdd: () => {},
