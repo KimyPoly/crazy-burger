@@ -13,9 +13,14 @@ export default function Basket() {
 
   const isBasketEmpty = basket.length === 0
 
+  const totalToPay = basket.reduce((total, basketProduct) => {
+    total += basketProduct.price * basketProduct.quantity
+    return total
+  }, 0)
+
   return (
     <BasketStyled>
-      <Header amountToPay={0}/>
+      <Header amountToPay={totalToPay.toFixed(2)}/>
       { isBasketEmpty ? <EmptyBasket/> : <BasketProducts basket={basket}/> }
       <Footer/>
     </BasketStyled>
