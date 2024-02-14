@@ -17,10 +17,10 @@ export default function Admin() {
 const AdminStyled = styled.div`
   width: 100%;
   height: 290px;
-  /* bottom: 0;
+  bottom: 0;
   left: 0;
   right: 0;
-  position: absolute; */
-  background: red;
+  position: absolute;
+
 
 `;
