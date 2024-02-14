@@ -8,6 +8,12 @@ const OrderContext = createContext({
   isCollapsed: false,
   setIsCollapsed: () => {},
 
+  isAddSelected: false,
+  setIsAddSelected: () => {},
+
+  isEditSelected: false,
+  setIsEditSelected: () => {},
+
   basket: [],
   handleAdddToBasket: () => {},
   handleDeleteBasketProduct: () => {},

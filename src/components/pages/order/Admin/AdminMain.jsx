@@ -1,10 +1,23 @@
 import styled from 'styled-components'
 import { theme } from "../../../../theme"
+import { useContext } from 'react'
+import  OrderContext from "../../../../context/OrderContext.jsx"
 
 export default function AdminMain() {
+
+  const {
+    isCollapsed,
+    setIsCollapsed,
+    isAddSelected,
+    setIsAddSelected,
+    isEditSelected,
+    setIsEditSelected
+  } = useContext(OrderContext)
+
   return (
     <AdminMainStyled>
-      
+      { isAddSelected && "Ajouter un produit"}
+      { isEditSelected && "Modifier un produit"}
     </AdminMainStyled>
   )
 }

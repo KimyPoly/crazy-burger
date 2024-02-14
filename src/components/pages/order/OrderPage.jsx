@@ -15,6 +15,8 @@ export default function OrderPage() {
 
   const [isModeAdmin, setIsModeAdmin] = useState(false)
   const [isCollapsed, setIsCollapsed] = useState(false)
+  const [isAddSelected, setIsAddSelected] = useState(true)
+  const [isEditSelected, setIsEditSelected] = useState(false)
   const {basket, handleAddToBasket, handleDeleteBasketProduct} = useBasket()
   const { menu, handleAdd } = useMenu()
 
@@ -23,6 +25,10 @@ export default function OrderPage() {
     setIsModeAdmin,
     isCollapsed,
     setIsCollapsed,
+    isAddSelected,
+    setIsAddSelected,
+    isEditSelected,
+    setIsEditSelected,
     basket,
     handleAddToBasket,
     handleDeleteBasketProduct,

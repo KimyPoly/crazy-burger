@@ -9,20 +9,36 @@ import  OrderContext from "../../../../context/OrderContext.jsx"
 
 export default function AdminTabs() {
 
-  const {isCollapsed, setIsCollapsed } = useContext(OrderContext)
+  const {
+    isCollapsed,
+    setIsCollapsed,
+    isAddSelected,
+    setIsAddSelected,
+    isEditSelected,
+    setIsEditSelected
+  } = useContext(OrderContext)
 
   const handleClick = () => {
     setIsCollapsed(!isCollapsed)
   }
 
+  const selectAddTab = () => {
+    setIsAddSelected(true)
+    setIsEditSelected(false)
+  }
+  const selectEditTab = () => {
+    setIsEditSelected(true)
+    setIsAddSelected(false)
+  }
+
   return (
     <AdminTabsStyled>
      <Tab Icon={<FiChevronDown/>} onClick={handleClick}/>
-      <div className='add-item'>
+      <div className='add-item' onClick={selectAddTab}>
         <FaPlus />
         <a href="">Ajouter un produit</a>
       </div>
-      <div className='modify-item'>
+      <div className='modify-item' onClick={selectEditTab}>
         <FaPencil />
         <a href="">Modifier un produit</a>
       </div>
@@ -33,6 +49,7 @@ const AdminTabsStyled = styled.div`
   display: flex;
   padding: 0 20px;
   width: 50%;
+
 
 
 
@@ -50,7 +67,8 @@ const AdminTabsStyled = styled.div`
       color: white;
     }
     svg {
-      color: ${theme.colors.greyMedium}
+      color: ${theme.colors.greyMedium};
+      margin-right: 5px;
     }
   }
   .modify-item {
@@ -63,6 +81,9 @@ const AdminTabsStyled = styled.div`
     }
     &:hover {
       text-decoration: underline;
+    }
+    svg {
+      margin-right: 5px;
     }
   }
 
