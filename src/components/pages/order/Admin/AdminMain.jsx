@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import { theme } from "../../../../theme"
 import { useContext } from 'react'
 import  OrderContext from "../../../../context/OrderContext.jsx"
+import AddProduct from './AddProduct.jsx'
+import EditProduct from './EditProduct.jsx'
 
 export default function AdminMain() {
 
@@ -16,8 +18,8 @@ export default function AdminMain() {
 
   return (
     <AdminMainStyled>
-      { isAddSelected && "Ajouter un produit"}
-      { isEditSelected && "Modifier un produit"}
+      { isAddSelected && <AddProduct/>}
+      { isEditSelected && <EditProduct/>}
     </AdminMainStyled>
   )
 }
