@@ -22,7 +22,10 @@ const OrderContext = createContext({
   handleAdd: () => {},
   handleDelete: () => {},
   handleEdit: () => {},
-  resetMenu: () => {}
+  resetMenu: () => {},
+
+  newProduct: [],
+  setNewProduct: () => {},
 
 })
 

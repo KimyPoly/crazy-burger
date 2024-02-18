@@ -1,5 +1,5 @@
 import { useState } from "react"
-import AdminMain from "./AdminMain"
+import AdminMain from "./AdminPanel/AdminMain.jsx"
 import AdminTabs from "./AdminTabs"
 import styled from 'styled-components'
 

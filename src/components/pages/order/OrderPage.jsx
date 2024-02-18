@@ -19,6 +19,7 @@ export default function OrderPage() {
   const [isEditSelected, setIsEditSelected] = useState(false)
   const {basket, handleAddToBasket, handleDeleteBasketProduct} = useBasket()
   const { menu, handleAdd } = useMenu()
+  const [newProduct, setNewProduct] = useState("")
 
   const orderContextValue = {
     isModeAdmin,
@@ -33,7 +34,9 @@ export default function OrderPage() {
     handleAddToBasket,
     handleDeleteBasketProduct,
     menu,
-    handleAdd
+    handleAdd,
+    newProduct,
+    setNewProduct
 
   }
   // comportement

@@ -2,8 +2,8 @@ import styled from 'styled-components'
 import { theme } from "../../../../../theme/index.jsx"
 import { useContext } from 'react'
 import  OrderContext from "../../../../../context/OrderContext.jsx"
-import AddProduct from '../AddProduct.jsx'
-import EditProduct from '../EditProduct.jsx'
+import AddProduct from './AddProduct.jsx'
+import EditProduct from './EditProduct.jsx'
 
 export default function AdminMain() {
 
