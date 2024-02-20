@@ -3,6 +3,7 @@ import { getInputTextsConfig } from "./inputTextConfig.jsx"
 import TextInput from '../../../../reusable-ui/TextInput.jsx'
 import OrderContext from "../../../../../context/OrderContext.jsx";
 import { useContext, useState } from 'react';
+import ImagePreview from './ImagePreview.jsx';
 
 
 
@@ -22,6 +23,7 @@ export default function AddProduct() {
   return (
     <AddProductStyled>
       Ajouter un produit
+      <ImagePreview/>
       <div className="input-fields">
         {inputTexts.map((input) => (
           <TextInput {...input} key={input.id} onChange={handleChange} version="minimalist" />
