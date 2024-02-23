@@ -22,7 +22,6 @@ export default function AddProduct() {
 
   return (
     <AddProductStyled>
-      Ajouter un produit
       <ImagePreview/>
       <div className="input-fields">
         {inputTexts.map((input) => (
@@ -33,5 +32,15 @@ export default function AddProduct() {
   )
 }
 const AddProductStyled = styled.div`
+   display: grid;
+   grid-template-columns: 1fr 3fr;
+
+   .input-fields {
+    grid-area: 1 / 2 / -2 / 3;
+    display: grid;
+    grid-row-gap: 8px;
+    margin-top: 15px;
+
+  }
 
 `;
