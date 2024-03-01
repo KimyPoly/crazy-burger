@@ -1,5 +1,5 @@
 import { useState } from "react"
-import AdminMain from "./AdminMain"
+import AdminMain from "./AdminPanel/AdminMain.jsx"
 import AdminTabs from "./AdminTabs"
 import styled from 'styled-components'
 
@@ -17,10 +17,10 @@ export default function Admin() {
 const AdminStyled = styled.div`
   width: 100%;
   height: 290px;
-  /* bottom: 0;
+  bottom: 0;
   left: 0;
   right: 0;
-  position: absolute; */
-  background: red;
+  position: absolute;
+
 
 `;

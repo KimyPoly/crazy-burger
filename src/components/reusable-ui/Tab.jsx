@@ -49,8 +49,8 @@ const TabStyled = styled.button`
     display: flex;
   }
 
-  .label {
+  /* .label {
     margin-left: 13px;
-  }
+  } */
 
 `
